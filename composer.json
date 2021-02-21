@@ -1,0 +1,16 @@
+{
+  "name": "gen/code",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "vinzen",
+      "email": "28281633@qq.com"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Gen\\Code\\": "src"
+    }
+  }
+}

@@ -2,3 +2,8 @@
 ```php
 php artisan make:newctrl unt UnitTypeController 提示备注
 ```
+
+在config/app.php的providers中加添
+```php
+Gen\Code\GenCodeServiceProvider::class,
+```

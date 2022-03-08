@@ -12,14 +12,13 @@ class DummyClass extends Controller
     {
         $page = $request->input("page", 1);
         $pageSize = $request->input("page_size", 15);
-        $data = #MODEL::query()->paginate($pageSize);
+        $data = #MODEL::query()->orderByDesc("id")->paginate($pageSize);
         return response()->json(["code" => 0, "data" => $data]);
     }
 
     public function create(#POST $request)
     {
         $data = $request->all();
-        $data["created_at"] = now();
         $bool = #MODEL::query()->insert($data);
         if ($bool)
             return response()->json(["code" => 0, "msg" => "success"]);
